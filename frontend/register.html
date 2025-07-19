@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Mindful Therapy</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="assets/logo.jpg" class="logo" alt="Online Therapy Logo" />
+        <h1>Mindful Therapy</h1>
+      </div>
+     <nav>
+        <a href="index.html">Home</a>
+        <a href="booking.html" class="protected-link">Book Session</a>
+        <a href="sessions.html" class="protected-link">My Sessions</a>
+        <a href="therapists.html">Our Therapists</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        
+        <a href="login.html" class="login-link">Login</a>
+        <a href="#" class="logout-link" style="display: none;">Logout</a>
+        <span class="user-profile" style="display: none;"></span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="auth-container">
+    <div class="auth-form">
+      <h2>Create Your Account</h2>
+      <form id="register-form">
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password (min 6 characters):</label>
+          <input type="password" id="password" minlength="6" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone (optional):</label>
+          <input type="tel" id="phone">
+        </div>
+        <button type="submit" class="btn">Register</button>
+      </form>
+      <p>Already have an account? <a href="login.html">Login here</a></p>
+      <p id="register-message"></p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Mindful Therapy</h3>
+        <p>Providing accessible, professional mental health care through secure online therapy sessions.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="booking.html">Book Session</a></li>
+          <li><a href="therapists.html">Our Therapists</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-envelope"></i> support@mindfultherapy.com</p>
+        <p><i class="fas fa-phone"></i> +91-9876543210</p>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Wellness Street, Delhi, India</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Mindful Therapy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import auth from './js/auth.js';
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      const registerForm = document.getElementById('register-form');
+      const messageElement = document.getElementById('register-message');
+      
+      registerForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const phone = document.getElementById('phone').value;
+        
+        const result = await auth.register({ name, email, password, phone });
+        
+        if (result.success) {
+          window.location.href = 'sessions.html';
+        } else {
+          messageElement.textContent = result.message;
+          messageElement.style.color = 'red';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

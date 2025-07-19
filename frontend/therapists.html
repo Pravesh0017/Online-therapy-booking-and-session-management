@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Meet our team of licensed therapists specializing in various mental health areas.">
+  <title>Our Therapists - Mindful Therapy</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="assets/logo.jpg" class="logo" alt="Online Therapy Logo" />
+        <h1>Mindful Therapy</h1>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="booking.html">Book Session</a>
+        <a href="sessions.html">My Sessions</a>
+        <a href="therapists.html">Our Therapists</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" id="logout-btn">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+
+
+
+
+    <section style="text-align: center; margin-bottom: 2rem;">
+      <h2>Meet Our Therapists</h2>
+      <p>Our team consists of licensed professionals with expertise in various mental health specialties. Each therapist brings unique skills and approaches to help you on your healing journey.</p>
+    </section>
+
+    <div class="therapist-container">
+      <div class="therapist-card">
+        <img src="assets/therapists.jpg" alt="Dr. Asha Verma" class="therapist-img">
+        <div class="therapist-info">
+          <h3>Dr. Asha Verma</h3>
+          <p class="therapist-specialty">PhD, Licensed Clinical Psychologist</p>
+          <p class="therapist-specialty">Specialties: Anxiety, Relationship Counseling, Women's Issues</p>
+          <p class="therapist-bio">With over 12 years of experience, Dr. Verma specializes in cognitive-behavioral approaches to anxiety and relationship challenges. She creates a warm, non-judgmental space for clients to explore their concerns.</p>
+          <a href="booking.html" class="btn" style="display: inline-block; width: auto;">Book with Dr. Verma</a>
+        </div>
+      </div>
+
+      <div class="therapist-card">
+        <img src="assets/therapists2.jpg" alt="Dr. Rajiv Singh" class="therapist-img">
+        <div class="therapist-info">
+          <h3>Dr. Rajiv Singh</h3>
+          <p class="therapist-specialty">PsyD, Licensed Psychologist</p>
+          <p class="therapist-specialty">Specialties: Depression, PTSD, Trauma Recovery</p>
+          <p class="therapist-bio">Dr. Singh combines evidence-based trauma therapies with mindfulness techniques to help clients heal from painful experiences. His approach is both compassionate and results-oriented.</p>
+          <a href="booking.html" class="btn" style="display: inline-block; width: auto;">Book with Dr. Singh</a>
+        </div>
+      </div>
+
+      <div class="therapist-card">
+        <img src="assets/therapists3.png" alt="Dr. Neha Kapoor" class="therapist-img">
+        <div class="therapist-info">
+          <h3>Dr. Neha Kapoor</h3>
+          <p class="therapist-specialty">EdD, Licensed Counselor</p>
+          <p class="therapist-specialty">Specialties: Teen Therapy, Stress Management, Life Transitions</p>
+          <p class="therapist-bio">Dr. Kapoor specializes in working with adolescents and young adults navigating academic stress, social challenges, and major life changes. Her approach is collaborative and strength-based.</p>
+          <a href="booking.html" class="btn" style="display: inline-block; width: auto;">Book with Dr. Kapoor</a>
+        </div>
+      </div>
+
+      <div class="therapist-card">
+        <img src="assets/therapists4.png" alt="Dr. Amit Desai" class="therapist-img">
+        <div class="therapist-info">
+          <h3>Dr. Amit Desai</h3>
+          <p class="therapist-specialty">MD, Psychiatrist</p>
+          <p class="therapist-specialty">Specialties: Addiction, Medication Management, Dual Diagnosis</p>
+          <p class="therapist-bio">Dr. Desai provides both therapy and medication management for clients dealing with substance use and co-occurring mental health conditions. He emphasizes holistic recovery approaches.</p>
+          <a href="booking.html" class="btn" style="display: inline-block; width: auto;">Book with Dr. Desai</a>
+        </div>
+      </div>
+
+      <div class="therapist-card">
+        <img src="assets/therapists5.png" alt="Ms. Priya Iyer" class="therapist-img">
+        <div class="therapist-info">
+          <h3>Ms. Priya Iyer</h3>
+          <p class="therapist-specialty">LMFT, Licensed Marriage and Family Therapist</p>
+          <p class="therapist-specialty">Specialties: Couples Counseling, Family Therapy, Communication Skills</p>
+          <p class="therapist-bio">With a focus on relationships, Ms. Iyer helps couples and families improve communication, resolve conflicts, and strengthen their connections through practical, solution-focused therapy.</p>
+          <a href="booking.html" class="btn" style="display: inline-block; width: auto;">Book with Ms. Iyer</a>
+        </div>
+      </div>
+    </div>
+
+    <section style="text-align: center; margin: 3rem 0;">
+      <h3>Not Sure Which Therapist Is Right For You?</h3>
+      <p>Our matching questionnaire can help you find the best therapist for your needs.</p>
+      <a href="booking.html" class="btn">Take Our Matching Quiz</a>
+    </section>
+  
+
+
+
+    <section style="text-align: center; margin-bottom: 2rem;">
+      <h2>Meet Our Therapists</h2>
+      <p>Our team consists of licensed professionals with expertise in various mental health specialties. Each therapist brings unique skills and approaches to help you on your healing journey.</p>
+      
+      <div class="search-filter">
+        <input type="text" id="therapist-search" placeholder="Search therapists...">
+        <select id="specialty-filter">
+          <option value="">All Specialties</option>
+          <option value="Anxiety">Anxiety</option>
+          <option value="Depression">Depression</option>
+          <option value="Relationship Counseling">Relationship Counseling</option>
+          <option value="Trauma">Trauma</option>
+          <option value="Stress Management">Stress Management</option>
+        </select>
+      </div>
+    </section>
+
+    <div id="therapists-loading" class="loading-spinner">
+      <i class="fas fa-spinner fa-spin"></i> Loading therapists...
+    </div>
+
+    <div class="therapist-container" id="therapists-list">
+      <!-- Therapists will be populated by JavaScript -->
+    </div>
+
+    <section style="text-align: center; margin: 3rem 0;">
+      <h3>Not Sure Which Therapist Is Right For You?</h3>
+      <p>Our matching questionnaire can help you find the best therapist for your needs.</p>
+      <a href="booking.html" class="btn">Take Our Matching Quiz</a>
+    </section>
+
+    <!-- Therapist Details Modal -->
+    <div id="therapist-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="therapist-modal-header">
+          <img id="modal-therapist-img" src="" alt="Therapist" class="therapist-img">
+          <div>
+            <h3 id="modal-therapist-name"></h3>
+            <p id="modal-therapist-qualification" class="therapist-specialty"></p>
+            <p id="modal-therapist-specialty" class="therapist-specialty"></p>
+          </div>
+        </div>
+        <div class="therapist-modal-body">
+          <h4>About Me</h4>
+          <p id="modal-therapist-bio"></p>
+          <h4>Experience</h4>
+          <p id="modal-therapist-experience"></p>
+          <h4>Approach</h4>
+          <p id="modal-therapist-approach"></p>
+        </div>
+        <div class="modal-actions">
+          <a href="booking.html" class="btn" id="book-with-therapist">Book Session</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Mindful Therapy</h3>
+        <p>Providing accessible, professional mental health care through secure online therapy sessions.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="booking.html">Book Session</a></li>
+          <li><a href="therapists.html">Our Therapists</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-envelope"></i> support@mindfultherapy.com</p>
+        <p><i class="fas fa-phone"></i> +91-9876543210</p>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Wellness Street, Delhi, India</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Mindful Therapy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/therapists.js"></script>
+</body>
+</html>
