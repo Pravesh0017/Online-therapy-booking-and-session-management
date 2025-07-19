@@ -42,5 +42,9 @@ A complete platform for booking online therapy sessions with licensed profession
 
 1. **Clone the repository**
    ```bash
+<<<<<<< HEAD
    git clone https://github.com/yourusername/online-therapy-booking.git
    cd online-therapy-booking
+=======
+  
+>>>>>>> b3a6bd4e8c0d381a73cadc697dee42933f8acbd6
